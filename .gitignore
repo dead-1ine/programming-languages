@@ -1,4 +1,7 @@
 example/
 
+# Scala:
+.bsp/
+
 # Rust: Ignore target directories in all projects
 rust/**/target/
