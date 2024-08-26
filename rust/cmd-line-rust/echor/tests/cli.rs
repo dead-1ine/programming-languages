@@ -1,6 +1,5 @@
 use anyhow::Result;
 use assert_cmd::Command;
-use predicates::prelude::*;
 use pretty_assertions::assert_eq;
 use std::fs;
 
@@ -13,6 +12,7 @@ fn dies_no_args() -> Result<()> {
     Ok(())
 }
 
+// helper 
 fn run(args: &[&str], expected_file: &str) -> Result<()> {
     let expected = fs::read_to_string(expected_file)?;
     let output = Command::cargo_bin("echor")?

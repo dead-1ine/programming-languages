@@ -3,7 +3,7 @@ use clap::Parser;
 #[derive(Debug, Parser)]
 #[command(author, version, about)]
 /// `cat`의 러스트 버전
-strcut Args {
+struct Args {
     /// Input file(s)
     #[arg(value_name = "FILE", default_value = "-")]
     files: Vec<String>,
